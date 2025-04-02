@@ -1,0 +1,8 @@
+float64 surge_top
+float64 surge_left
+float64 surge_right
+float64 sway_back
+float64 sway_front
+float64 heave_back
+float64 heave_left
+float64 heave_right

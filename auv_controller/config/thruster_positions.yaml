@@ -1,0 +1,81 @@
+---
+controller:
+  ros__parameters:
+    num_thrust: 8
+
+    max_front_force: 43.605
+    max_back_force: 34.187
+    max_pwm: 1850
+    min_pwm: 1150
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1
+    
+    COM:
+      x: -0.429
+      y: -0.175
+      z: -0.025
+  
+    surge_top:
+      x: -0.776
+      y: -0.126
+      z: -0.204
+      roll: 0
+      pitch: -1.57
+      yaw: 1.57
+  
+    surge_left:
+      x: -0.644
+      y: -0.38
+      z: 0.052
+      roll: 0
+      pitch: -1.57
+      yaw: 1.57
+
+    surge_right:
+      x: -0.644
+      y: 0.127
+      z: 0.052
+      roll: 0
+      pitch: -1.57
+      yaw: 1.57
+
+    sway_back:
+      x: -0.826
+      y: -0.105
+      z: 0.032
+      roll: 1.57
+      pitch: 0
+      yaw: 1.57
+
+    sway_front:
+      x: -0.027
+      y: -0.129
+      z: -0.09
+      roll: 1.57
+      pitch: 0
+      yaw: 1.57
+
+    heave_left:
+      x: -0.102
+      y: -0.38
+      z: -0.072
+      roll: -1.57
+      pitch: 1.57
+      yaw: 0
+
+    heave_right:
+      x: -0.102
+      y: 0.127
+      z: -0.073
+      roll: -1.57
+      pitch: 1.57
+      yaw: 0
+
+    heave_back:
+      x: -0.912
+      y: -0.126
+      z: -0.0925
+      roll: -1.57
+      pitch: 1.57
+      yaw: 0

@@ -1,0 +1,350 @@
+{
+    "tasks": {
+      "Backup": {
+        "task_timeout": 4,
+        "actions": [
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": -200,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          }
+        ]
+      },
+      "FullYaw": {
+        "task_timeout": 10,
+        "actions": [
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 120
+            },
+            "timeout": 10,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 120
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 120
+            },
+            "timeout": 10,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 120
+            },
+            "timeout": 10,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 120
+            },
+            "timeout": 10,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 120
+            },
+            "timeout": 10,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          }
+        ]
+      },
+      "Gate": {
+        "task_timeout": -1,
+        "actions": [
+          {
+            "name": "ckill"
+          },
+          {
+            "name": "sleep",
+            "duration": 75.0
+          },
+          {
+            "name": "cunkill"
+          },
+          {
+            "name": "reach",
+            "reach_timeout": -1,
+            "reach_pos_tolerance": 10,
+            "reach_angle_tolerance": 5
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 300,
+              "y": 0,
+              "z": 20,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          }
+        ]
+      },
+      "Octagon": {
+        "task_timeout": -1,
+        "actions": [
+          {
+            "name": "reach",
+            "reach_timeout": -1,
+            "reach_pos_tolerance": 10,
+            "reach_angle_tolerance": 5
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": -50,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          }
+        ]
+      },
+      "BarrelRoll": {
+        "task_timeout": -1,
+        "actions": [
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": 20,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "barrel_roll"
+          },
+          {
+            "name": "cunkill"
+          },
+          {
+            "name": "barrel_roll"
+          },
+          {
+            "name": "cunkill"
+          },
+          {
+            "name": "sleep",
+            "duration": 8
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": -20,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          }
+        ]
+      },
+      "Buoy": {
+        "task_timeout": -1,
+        "actions": [
+          {
+            "name": "reach",
+            "reach_timeout": -1,
+            "reach_pos_tolerance": 10,
+            "reach_angle_tolerance": 5
+          },
+          {
+            "name": "align_continuous",
+            "scan_type": "vertical_spiral",
+            "camera": "front",
+            "align_displacement": {
+              "x": -100,
+              "y": 0,
+              "z": 0,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "hard_z_flag": true,
+            "hard_z_value": 100,
+            "align_xy_tolerance": 10.0,
+            "align_z_tolerance": 10.0,
+            "align_angle_tolerance": 5.0,
+            "timeout": 90
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 0,
+              "z": 5,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": -100,
+              "z": 5,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 200,
+              "y": 0,
+              "z": 5,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 200,
+              "z": 5,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": -200,
+              "y": 0,
+              "z": 5,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": -100,
+              "z": 5,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          },
+          {
+            "name": "raw_navigate",
+            "rel_position": {
+              "x": 0,
+              "y": 200,
+              "z": 5,
+              "roll": 0,
+              "pitch": 0,
+              "yaw": 0
+            },
+            "timeout": -1,
+            "navigate_pos_tolerance": 10.0,
+            "navigate_angle_tolerance": 5.0
+          }
+        ]
+      }
+    }
+}
+  

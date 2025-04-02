@@ -1,0 +1,34 @@
+controller:
+  ros__parameters:
+    heave_CEM:
+      surge_top:
+        power_factor: 0.85
+        backward_ratio: 1.000
+
+      surge_left:
+        power_factor: 0.99
+        backward_ratio: 1.000
+    
+      surge_right:
+        power_factor: 0.941
+        backward_ratio: 1.000
+    
+      sway_back:
+        power_factor: 0.320
+        backward_ratio: 1.000
+    
+      sway_front:
+        power_factor: 0.950
+        backward_ratio: 1.000
+    
+      heave_left:
+        power_factor: 1.40
+        backward_ratio: 0.800
+    
+      heave_right:
+        power_factor: 0.8
+        backward_ratio: 1.000
+    
+      heave_back:
+        power_factor: 1.2
+        backward_ratio: 1.3

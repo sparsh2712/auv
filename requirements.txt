@@ -1,0 +1,10 @@
+numpy>=1.21.0
+pandas>=2.1.0
+scipy>=1.7.3
+simple_pid>=2.0.0
+opencv-python>=4.8.0
+pypylon>=3.0.0
+serial>=0.0.97
+argparse>=1.4.0
+tk>=0.1.0
+serial-tool>=0.0.1

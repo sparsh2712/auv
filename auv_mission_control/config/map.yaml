@@ -1,0 +1,19 @@
+---
+mission_control:
+  map:
+    - task: Buoy
+      pose:
+        x: 0
+        y: 0
+        z: 30
+        roll: 0
+        pitch: 0
+        yaw: 0
+    - task: Torpedo
+      pose:
+        x: 50
+        y: 20
+        z: 40
+        roll: 0
+        pitch: 0
+        yaw: 0

@@ -1,0 +1,18 @@
+# Goal definition
+string current_service_type
+string scan_type
+auv_msgs/Pose setpoint
+float32 pos_tolerance
+float32 angle_tolerance
+float32 xy_tolerance
+float32 z_tolerance
+
+---
+# Result definition
+bool success
+
+---
+# Feedback definition
+string setpoint_detect
+string task_name
+string action

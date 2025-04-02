@@ -1,0 +1,617 @@
+---
+mission_control:
+  plan:
+    mission:
+      - main: "TorpedoFlex"
+        backup: ""
+      - main: "TorpedoSafe"
+        backup: ""
+      - main: "TorpedoBackup"
+        backup: ""
+      - main: "Octagon"
+        backup: ""
+
+  tasks:
+    Backup:
+      task_timeout: 4
+      actions:
+        - name: "raw_navigate"
+          rel_position:
+            x: -200
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+
+    FullYaw:
+      task_timeout: 10
+      actions:
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 120
+          timeout: 10
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 120
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 120
+          timeout: 10
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 120
+          timeout: 10
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 120
+          timeout: 10
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 120
+          timeout: 10
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+
+    Gate:
+      task_timeout: -1
+      actions:
+        - name: "ckill"
+        - name: "sleep"
+          duration: 75.0
+        - name: "cunkill"
+        - name: "reach"
+          reach_timeout: -1
+          reach_pos_tolerance: 10
+          reach_angle_tolerance: 5
+        - name: "raw_navigate"
+          rel_position:
+            x: 300
+            y: 0
+            z: 20
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+
+    Octagon:
+      task_timeout: -1
+      actions:
+        - name: "reach"
+          reach_timeout: -1
+          reach_pos_tolerance: 10
+          reach_angle_tolerance: 5
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: -50
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "ckill"
+
+    BarrelRoll:
+      task_timeout: -1
+      actions:
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 20
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "barrel_roll"
+        - name: "cunkill"
+        - name: "barrel_roll"
+        - name: "cunkill"
+        - name: "sleep"
+          duration: 8
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: -20
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+    
+    Buoy:
+      task_timeout: -1
+      actions:
+        - name: "reach"
+          reach_timeout: -1
+          reach_pos_tolerance: 10
+          reach_angle_tolerance: 5
+        - name: "align_continuous"
+          scan_type: "backup_and_strafe"
+          camera: "front"
+          align_displacement:
+            x: -100
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          hard_z_flag: True
+          hard_z_value: 100
+          align_xy_tolerance: 10.0
+          align_z_tolerance: 10.0
+          align_angle_tolerance: 5.0
+          timeout: 90
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: -100
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 200
+            y: 0
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 200
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: -200
+            y: 0
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: -100
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 200
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+    
+    TorpedoFlex:
+      task_timeout: -1
+      actions:
+        - name: "reach"
+          reach_timeout: -1
+          reach_pos_tolerance: 10
+          reach_angle_tolerance: 5
+        - name: "align_continuous"
+          scan_type: "backup_and_strafe"
+          camera: "front"
+          align_displacement:
+            x: -200
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          hard_z_flag: True
+          hard_z_value: 100
+          align_xy_tolerance: 25.0
+          align_z_tolerance: 15.0
+          align_angle_tolerance: 5.0
+          timeout: 90
+
+    Torpedo:
+      task_timeout: -1
+      actions:
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 30
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 70 #50
+            y: 20 #-30
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "set_torpedo"
+          side: 'bottom'
+          size: 2
+        - name: "align_continuous"
+          scan_type: "backup_and_strafe"
+          camera: "front"
+          align_displacement:
+            x: -85
+            y: -7
+            z: 7
+            roll: 0
+            pitch: 0
+            yaw: 0
+          hard_z_flag: False
+          hard_z_value: 110
+          align_xy_tolerance: 6.0
+          align_z_tolerance: 10.0
+          align_angle_tolerance: 3.0
+          timeout: 90
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 20
+            y: 2
+            z: 20
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 5.0
+          navigate_angle_tolerance: 3.0
+        - name: "sleep"
+          duration: 6.0
+        - name: "shoot_torpedo"
+          torpedo_position: "left"
+        - name: "sleep"
+          duration: 6.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 10
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 5.0
+          navigate_angle_tolerance: 3.0
+        - name: "sleep"
+          duration: 6.0
+        - name: "shoot_torpedo"
+          torpedo_position: "right"
+        - name: "sleep"
+          duration: 8.0
+        - name: "raw_navigate"
+          rel_position:
+            x: -150
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "shoot_torpedo"
+          torpedo_position: "center"
+
+    TorpedoSafe:
+      task_timeout: -1
+      actions:
+        - name: "reach"
+          reach_timeout: -1
+          reach_pos_tolerance: 10
+          reach_angle_tolerance: 5
+        - name: "set_torpedo"
+          side: 'biggest'
+          size: 4
+        - name: "align_continuous"
+          scan_type: "backup_and_strafe"
+          camera: "front"
+          align_displacement:
+            x: -85
+            y: -7
+            z: 7
+            roll: 0
+            pitch: 0
+            yaw: 0
+          hard_z_flag: False
+          hard_z_value: 110
+          align_xy_tolerance: 6.0
+          align_z_tolerance: 10.0
+          align_angle_tolerance: 3.0
+          timeout: 90
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 20
+            y: 2
+            z: 20
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 5.0
+          navigate_angle_tolerance: 3.0
+        - name: "sleep"
+          duration: 6.0
+        - name: "shoot_torpedo"
+          torpedo_position: "left"
+        - name: "sleep"
+          duration: 6.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 10
+            z: 5
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 5.0
+          navigate_angle_tolerance: 3.0
+        - name: "sleep"
+          duration: 6.0
+        - name: "shoot_torpedo"
+          torpedo_position: "right"
+        - name: "sleep"
+          duration: 8.0
+
+    TorpedoBackup:
+      task_timeout: -1
+      actions:
+        - name: "raw_navigate"
+          rel_position:
+            x: 100
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "sleep"
+          duration: 6.0
+        - name: "shoot_torpedo"
+          torpedo_position: "right"
+        - name: "sleep"
+          duration: 6.0
+        - name: "shoot_torpedo"
+          torpedo_position: "left"
+        - name: "sleep"
+          duration: 8.0
+        - name: "raw_navigate"
+          rel_position:
+            x: -150
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 200
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "shoot_torpedo"
+          torpedo_position: "center"
+
+    BinBackup:
+      task_timeout: -1
+      actions:
+        - name: "drop_marker"
+          dropper_position: "left"
+        - name: "sleep"
+          duration: 6.0
+        - name: "drop_marker"
+          dropper_position: "right"
+        - name: "sleep"
+          duration: 6.0
+        - name: "drop_marker"
+          dropper_position: "center"
+
+    Bin:
+      task_timeout: -1
+      actions:
+        - name: "reach"
+          reach_timeout: -1
+          reach_pos_tolerance: 10
+          reach_angle_tolerance: 5
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: -30
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "align_continuous"
+          scan_type: "horizontal_spiral"
+          camera: "bottom"
+          align_displacement:
+             x: 0
+             y: 0
+             z: -65
+             roll: 0
+             pitch: 0
+             yaw: 0
+          hard_z_flag: True
+          hard_z_value: 50
+          align_xy_tolerance: 15.0
+          align_z_tolerance: 10.0
+          align_angle_tolerance: 5.0
+          timeout: 90
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: 0
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "raw_navigate"
+          rel_position:
+            x: -40
+            y: -5
+            z: 110
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 5.0
+          navigate_angle_tolerance: 5.0
+        - name: "sleep"
+          duration: 6.0
+        - name: "drop_marker"
+          dropper_position: "left"
+        - name: "sleep"
+          duration: 6.0
+        - name: "drop_marker"
+          dropper_position: "right"
+        - name: "sleep"
+          duration: 6.0
+        - name: "raw_navigate"
+          rel_position:
+            x: 0
+            y: 0
+            z: -20
+            roll: 0
+            pitch: 0
+            yaw: 0
+          timeout: -1
+          navigate_pos_tolerance: 10.0
+          navigate_angle_tolerance: 5.0
+        - name: "drop_marker"
+          dropper_position: "center"
+ 

@@ -1,0 +1,118 @@
+---
+vision:
+  front_camera_config:
+    img_height: 404
+    img_width: 644
+  bottom_camera_config:
+    img_height: 404
+    img_width: 644
+  dvl_to_camera_vector:
+    front:
+      x: 1
+      y: 0
+      z: 0
+    bottom:
+      x: 0
+      y: 0
+      z: 0
+  objects:
+    - object_id: 0
+      object_name: 'Gate'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 1
+      object_name: 'Gate_Gman'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 2
+      object_name: 'Gate_Bootlegger'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 3
+      object_name: 'Buoy_Gman_Badge'
+      object_length: 10
+      object_height: 10
+      min_confidence: 0.7
+    - object_id: 4
+      object_name: 'Buoy_Bootlegger_Gun'
+      object_length: 0.6
+      object_height: 1.3
+      min_confidence: 0.5
+    - object_id: 5
+      object_name: 'Bin_Bootlegger'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 6
+      object_name: 'Bin_Gman'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 7
+      object_name: 'Bin_Bootlegger_bottle'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 8
+      object_name: 'Bin_Bootlegger_barrel'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 9
+      object_name: 'Bin_Gman_phone'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 10
+      object_name: 'Bin_Gman_paper'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 11
+      object_name: 'Torpedo_Bootlegger'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 12
+      object_name: 'Torpedo_Gman'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 13
+      object_name: 'Torpedo_Bootlegger_trapezoid'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 14
+      object_name: 'Torpedo_Gman_star'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 15
+      object_name: 'Torpedo_Circle'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 16
+      object_name: 'Octagon_Bootlegger_dollar'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 17
+      object_name: 'Octagon_Gman_axe'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+    - object_id: 18
+      object_name: 'Path_marker'
+      object_length: 10
+      object_height: 10
+      min_confidence: 1
+  tasks:
+    - task_name: "Buoy_Gman"
+      object_names: ["Buoy_Gman_Badge"]
+    - task_name: "Buoy_Bootlegger"
+      object_names: ["Buoy_Bootlegger_Gun"]

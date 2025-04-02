@@ -1,0 +1,12 @@
+# Goal definition
+geometry_msgs/Pose pose
+float64 pos_tolerance
+float64 angle_tolerance
+
+---
+# Result definition
+bool success
+
+---
+# Feedback definition
+float64 progress

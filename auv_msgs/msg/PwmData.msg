@@ -1,0 +1,8 @@
+uint64 surge_front_left
+uint64 surge_front_right
+uint64 surge_back_left
+uint64 surge_back_right
+uint64 heave_front_left
+uint64 heave_front_right
+uint64 heave_back_left
+uint64 heave_back_right

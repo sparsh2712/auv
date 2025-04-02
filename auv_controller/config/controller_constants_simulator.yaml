@@ -1,0 +1,38 @@
+---
+controller:
+  surge:
+    Kp: 0.1
+    Ki: 0
+    Kd: 0.02
+    maxBack: -30
+    maxFront: 30
+  sway:
+    Kp: 0.04
+    Ki: 0
+    Kd: 0.04
+    maxBack: -30
+    maxFront: 30
+  heave:
+    Kp: 0.15
+    Ki: 0 #0.04
+    Kd: 0 #0.005
+    maxBack: -30
+    maxFront: 30
+  roll:
+    Kp: 3
+    Ki: 0
+    Kd: 2
+    maxBack: -20
+    maxFront: 20
+  pitch:
+    Kp: 3
+    Ki: 0
+    Kd: 2
+    maxBack: -20
+    maxFront: 20
+  yaw:
+    Kp: 3
+    Ki: 0
+    Kd: 2
+    maxBack: -20
+    maxFront: 20

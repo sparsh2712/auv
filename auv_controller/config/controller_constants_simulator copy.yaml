@@ -1,0 +1,167 @@
+---
+controller:
+  surge:
+    Kp: 0.1
+    Ki: 0
+    Kd: 0.02
+    maxBack: -30
+    maxFront: 30
+  sway:
+    Kp: 0.04
+    Ki: 0
+    Kd: 0.04
+    maxBack: -30
+    maxFront: 30
+  heave:
+    Kp: 0.15
+    Ki: 0 #0.04
+    Kd: 0 #0.005
+    maxBack: -30
+    maxFront: 30
+  roll:
+    Kp: 3
+    Ki: 0
+    Kd: 2
+    maxBack: -20
+    maxFront: 20
+  pitch:
+    Kp: 3
+    Ki: 0
+    Kd: 2
+    maxBack: -20
+    maxFront: 20
+  yaw:
+    Kp: 3
+    Ki: 0
+    Kd: 2
+    maxBack: -20
+    maxFront: 20
+  
+  
+  num_thrust: 8
+
+  COM:
+          #x: -0.429
+    x: -0.429
+    y: -0.125
+    z: -0.034
+
+  surge_top:
+    x: -0.776
+    y: -0.126
+    z: -0.204
+    roll: 0
+    pitch: -1.57
+    yaw: 1.57
+    max_front_force: 11.172
+    max_back_force: 9.212
+    max_pwm: 1750
+    min_pwm: 1250
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1
+  
+  surge_left:
+    x: -0.644
+    y: -0.38
+    z: 0.052
+    roll: 0
+    pitch: -1.57
+    yaw: 1.57
+    max_front_force: 11.172
+    max_back_force: 9.212
+    max_pwm: 1750
+    min_pwm: 1250
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1
+  
+  surge_right:
+    x: -0.644
+    y: 0.127
+    z: 0.052
+    roll: 0
+    pitch: -1.57
+    yaw: 1.57
+    max_front_force: 11.172
+    max_back_force: 9.212
+    max_pwm: 1750
+    min_pwm: 1250
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1
+  
+  sway_back:
+    x: -0.826
+    y: -0.105
+    z: 0.032
+    roll: 1.57
+    pitch: 0
+    yaw: 1.57
+    max_front_force: 11.172
+    max_back_force: 9.212
+    max_pwm: 1750
+    min_pwm: 1250
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1
+  
+  sway_front:
+    x: -0.027
+    y: -0.129
+    z: -0.09
+    roll: 1.57
+    pitch: 0
+    yaw: 1.57
+    max_front_force: 11.172
+    max_back_force: 9.212
+    max_pwm: 1750
+    min_pwm: 1250
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1
+  
+  heave_left:
+    x: -0.102
+    y: -0.38
+    z: -0.072
+    roll: -1.57
+    pitch: 1.57
+    yaw: 0
+    max_front_force: 11.172
+    max_back_force: 9.212
+    max_pwm: 1750
+    min_pwm: 1250
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1
+  
+  heave_right:
+    x: -0.102
+    y: 0.127
+    z: -0.073
+    roll: -1.57
+    pitch: 1.57
+    yaw: 0
+    max_front_force: 11.172
+    max_back_force: 9.212
+    max_pwm: 1750
+    min_pwm: 1250
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1
+  
+  heave_back:
+    x: -0.912
+    y: -0.126
+    z: -0.0925
+    roll: -1.57
+    pitch: 1.57
+    yaw: 0
+    max_front_force: 11.172
+    max_back_force: 9.212
+    max_pwm: 1750
+    min_pwm: 1250
+    zero_pwm: 1500
+    gamma_front: 1
+    gamma_back: 1

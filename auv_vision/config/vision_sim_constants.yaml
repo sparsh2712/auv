@@ -1,0 +1,48 @@
+---
+vision:
+  front_camera_config:
+    img_height: 640
+    img_width: 640
+  bottom_camera_config:
+    img_height: 640
+    img_width: 640
+  dvl_to_camera_vector:
+    front:
+      x: 0
+      y: 0
+      z: 0
+    bottom:
+      x: 0
+      y: 0
+      z: 0
+  objects:
+    - object_id: 0
+      object_name: 'Abydos_1'
+      object_length: 12
+      object_height: 11
+      min_confidence: 0.25
+    - object_id: 1
+      object_name: 'Buoy'
+      object_length: 35
+      object_height: 30
+      min_confidence: 0.25
+    - object_id: 2
+      object_name: 'Earth_1'
+      object_length: 13
+      object_height: 10
+      min_confidence: 0.25
+    - object_id: 3
+      object_name: 'Earth_2'
+      object_length: 15
+      object_height: 12
+      min_confidence: 0.25
+    - object_id: 4
+      object_name: 'abydos_2'
+      object_length: 5
+      object_height: 15
+      min_confidence: 0.25
+  tasks:
+    - task_name: "Buoy_Gman"
+      object_names: ["Buoy_Gman_Badge"]
+    - task_name: "Buoy_Bootlegger"
+      object_names: ["Buoy_Bootlegger_Gun"]

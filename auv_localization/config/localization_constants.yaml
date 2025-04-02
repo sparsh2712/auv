@@ -1,0 +1,15 @@
+localization:
+  ros__parameters:
+    imu_orientation:
+      roll: 0.0 #180.0
+      pitch: 0.0
+      yaw: 180.0
+    dvl_orientation:
+      roll: 0.0 
+      pitch: 0.0 
+      yaw: 0.0
+    imu_status: True
+    dvl_status: True
+    ps_status: True
+    dvl_vel_integrate: True
+
